@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hawaiian Airlines - Flights to Hawaii, Plane Tickets &amp; Airfare</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/keepSafe.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" >
+  <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div id="searchDiv" class="header-searchboxHidden">
+    <div class="serchBox-inner">
+      <div class="searchBox-left">
+        <div class="searchbox-localHide">
+          <i onclick="closeSearch()" class="fa fa-close"></i>
+        </div>
+        <div class="searchbox-input">
+          <i class='fas fa-search'></i>
+          <input type="text" placeholder="Type Your Question Here">
+        </div>
+        <button>Search</button>
+      </div>
+      <div class="searchbox-right">
+        <div class="question-box">
+          <h6>Frequently Asked Questions</h6>
+          <div class="questions">
+            <a href="">What do I need to do to change or cancel my reservation?</a>
+            <a href="">How much are baggage fees on my flight?</a>
+            <a href="">How do I check in online?</a>
+          </div>
+          <button>Read more FAQs</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <header>
+    <div class="header-inner">
+      <div class="header-left">
+        <div class="header-left-logo">
+          <img src="https://www.hawaiianairlines.com/Content/assets/images/logos/ha-logo-horizontal.png" alt="">
+        </div>
+      </div>
+      <div class="header-right">
+        <div class="header-right-topnav">
+          <nav class="topnav-inner">
+            <ul>
+              <li><a href="#">Help Center</a></li>
+              <li><a href="#">Optional Fees</a></li>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">Contact Us</a></li>
+              <li class="topNav-search" onclick="openSearch()">
+                <i class='fas fa-search'></i>
+                <span>Search</span>
+              </li>
+              <div class="btn-group">
+                <button onclick="toggleRotate()" class="languageSelect-default" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <img src="./icons/flags/united-states.png" alt="">
+                  <span >USD</span>
+                  <i style="transition: .3s;" id="toggleIcon" class='fas fa-caret-down'></i>
+                </button>
+                <div class="dropdown-menu dropdown-menu-right">
+                  <div class="moreLanguages">
+                    <li>
+                      <span>United States(USD)</span>
+                      <img src="./icons/flags/united-states.png" alt="">
+                    </li>
+                    <li>
+                      <span>日本 (JPY)</span>
+                      <img src="./icons/flags/japan.png" alt="">
+                    </li>
+                    <li>
+                      <span>한국어 (KRW)</span>
+                      <img src="./icons/flags/south-korea.png" alt="">
+                    </li>
+                    <li>
+                      <span>Australia (AUD)</span>
+                      <img src="./icons/flags/austria.png" alt="">
+                    </li>
+                    <li>
+                      <span>New Zealand (NZD)</span>
+                      <img src="./icons/flags/new-zealand.png" alt="">
+                    </li>
+                    <li>
+                      <span>中国 (CNY)</span>
+                      <img src="./icons/flags/china.png" alt="">
+                    </li>
+                  </div>
+                </div>
+              </div>
+            </ul>
+          </nav>
+        </div>
+        <div class="header-right-mainNav">
+          <div class="mainNav-inner">
+            <ul>
+              <li><a href="#">Book</a><div class="list-bottomLine-hidden"></div></li>
+              <li><a href="#">Manage Flights</a><div class="list-bottomLine-hidden"></div></li>
+              <li><a href="#">Our Airline</a><div class="list-bottomLine-hidden"></div></li>
+              <li><a href="#">Island Guide</a><div class="list-bottomLine-hidden"></div></li>
+            </ul>
+            <div class="mainNav-dropLine"></div>
+            <div class="mainNav-activity">
+              <img src="https://www.hawaiianairlines.com/Content/assets/images/logos/hm-logo-hawaiianmiles.png" alt="">
+              <div class="mainNav-authItems">
+                <a href="">Sign In</a>
+                <a href="">Join Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="keepSafePage-hero">
+      <h1>Keeping you safe</h1>
+      <img src="http://img.s-hawaiianairlines.com/static/images/coronavirus/kys/hero-image.jpg?version=da03&amp;sc_lang=en?w=1920&amp;hash=47546C2C9CA6EA448F72773FB7A71BF5FC8048C9,//img.s-hawaiianairlines.com/static/images/coronavirus/kys/hero-image.jpg?version=da03&amp;sc_lang=en?w=3840&amp;hash=47546C2C9CA6EA448F72773FB7A71BF5FC8048C9" alt="">
+  </div>
+  <div class="keepSafeBannner">
+      <div class="keepsafe-item">
+          <div class="keepsafe-item-inner">
+            <h2>Face coverings</h2>
+            <ul>
+              <li>Hawaiian Airlines airport employees wear face masks when interacting with guests.</li>
+              <li>Guests are required to wear a face mask or covering that effectively covers the mouth and nose while boarding, through the duration of the flight and while deplaning at their destination. Please check local airport rules at your departure and arrival airports for specific requirements regarding face masks.</li>
+              <li>Masks or face coverings with vents or exhalation valves, mesh face coverings or other obviously transparent cloth coverings (excluding non-porous see-through materials like plastic) will not be considered acceptable forms of face coverings.</li>
+              <li>Face shields cannot be used in lieu of a face covering, but may be used in addition to an appropriate face covering.</li>
+              <li>Children under the age of two will be exempt from the policy.</li>
+              <li>Guests who are unable to wear a face covering due to a medical condition or disability will be required to complete an assessment with a medical professional via phone at the airport. We recommend arriving at the airport early with ample time to complete the assessment, as the process may take more than one hour, and your flight will not be held. Please notify one of our Guest Services Agents as soon as you are ready to complete the medical assessment. If you are unable to meet this requirement, we recommend that you reconsider your travel. Please note that any face covering exemptions apply only to travel on Hawaiian Airlines or ‘Ohana by Hawaiian.</li>
+            </ul>
+          </div>
+      </div>
+      <div class="keepsafe-item" style="background-color: #f0f2f3;">
+          <div class="keepsafe-item-inner">
+            <h2>Disinfecting common areas</h2>
+            <ul>
+              <li>We disinfect our common areas, such as our counters and kiosks, multiple times each day.</li>
+            </ul>
+          </div>
+      </div>
+      <div class="keepsafe-item">
+          <div class="keepsafe-item-inner">
+            <h2>Hand sanitizer</h2>
+            <ul>
+              <li>Hand sanitizers are readily available for travelers at airports statewide and on the mainland.</li>
+              <li>TSA is allowing passengers to bring liquid hand sanitizer up to 12 ounces in carry-on bags until further notice.</li>
+            </ul>
+          </div>
+      </div>
+      <div class="keepsafe-item" style="background-color: #f0f2f3;">
+          <div class="keepsafe-item-inner">
+            <h2>Boarding and deplaning</h2>
+            <ul>
+              <li>We have modified our boarding and deplaning process to promote safe distancing between guests.</li>
+              <li>We are asking guests to remain seated at the gate area until their row is called to board.</li>
+              <li>We have placed 6-feet markers on the ground at our gates, as well as ticket counters and baggage claim areas.</li>
+              <li>Main Cabin guests will board from the rear of the aircraft, in groups of three to five rows at a time.</li>
+              <li>Guests who need special assistance, and those seated in First Class, will be able to pre-board.</li>
+              <li>Agents may pause boarding and deplaning as needed to prevent congestion.</li>
+            </ul>
+          </div>
+      </div>
+      <div class="keepsafe-item">
+          <div class="keepsafe-item-inner">
+            <h2>Airport lounges</h2>
+            <ul>
+              <li>We have temporarily closed the Plumeria Lounge and all Premier Club locations at all airports.</li>
+            </ul>
+          </div>
+      </div>
+      <div class="board-items">
+        <div class="banner-tesxt">
+          <h1>On board our aircraft</h1>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-4">
+              <div class="board-item">
+                <img src="//img.s-hawaiianairlines.com/static/images/hawaiistories/hawaii-is-our-home/reservations/thumbnail/image-safety/image---safety.jpg?version=ffe6&amp;sc_lang=en&amp;w=340&amp;hash=1BFC496EAB7590F95DD906DE2D243C6BA47DA45E,//img.s-hawaiianairlines.com/static/images/hawaiistories/hawaii-is-our-home/reservations/thumbnail/image-safety/image---safety.jpg?version=ffe6&amp;sc_lang=en&amp;w=680&amp;hash=2C58B5A936B9130DA68B9B4D31CA99FC00BB20C7,//img.s-hawaiianairlines.com/static/images/hawaiistories/hawaii-is-our-home/reservations/thumbnail/image-safety/image---safety.jpg?version=ffe6&amp;sc_lang=en&amp;w=340&amp;hash=1BFC496EAB7590F95DD906DE2D243C6BA47DA45E,//img.s-hawaiianairlines.com/static/images/hawaiistories/hawaii-is-our-home/reservations/thumbnail/image-safety/image---safety.jpg?version=ffe6&amp;sc_lang=en&amp;w=680&amp;hash=2C58B5A936B9130DA68B9B4D31CA99FC00BB20C7" alt="">
+                <div class="boarditem-desc">
+                  <h5>Keeping you safe</h5>
+                  <p>For your safety and comfort, we have made changes to promote a safe travel experience and limit person-to-person contact. While the experience may be a little different, our authentic Hawaiian hospitality remains unchanged.</p>
+                  <button data-toggle="modal" data-target="#staticBackdrop">Learn more</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="board-item">
+                <img src="//img.s-hawaiianairlines.com/static/images/all-various-media/partner-features-tout.png?version=39cb&amp;sc_lang=en&amp;w=340&amp;hash=EFF99C330386E16235ACF049B38E9E702AC0ECE6,//img.s-hawaiianairlines.com/static/images/all-various-media/partner-features-tout.png?version=39cb&amp;sc_lang=en&amp;w=680&amp;hash=9F7B7DA571CE08295D40B661FF4100F6D731FAC2,//img.s-hawaiianairlines.com/static/images/all-various-media/partner-features-tout.png?version=39cb&amp;sc_lang=en&amp;w=340&amp;hash=EFF99C330386E16235ACF049B38E9E702AC0ECE6,//img.s-hawaiianairlines.com/static/images/all-various-media/partner-features-tout.png?version=39cb&amp;sc_lang=en&amp;w=680&amp;hash=9F7B7DA571CE08295D40B661FF4100F6D731FAC2" alt="">
+                <h5>Partner features</h5>
+                <p>We’re proud to partner with the many businesses that make Hawaii so unique. In this series, we’re highlighting some of our amazing partners and their stories. Explore the unique designs, flavors and experiences of our Islands through the stories of our extended ohana.</p>
+                <button data-toggle="modal" data-target="#staticBackdrop">Learn more</button>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="board-item">
+                <img src="//img.s-hawaiianairlines.com/static/images/hawaiistories/hawaii-is-our-home/reservations/thumbnail/sharingaloha_titlestill.jpg?version=64de&amp;sc_lang=en&amp;w=340&amp;hash=92BE4A5556BB95B27D97EE3A8C341067AC723707,//img.s-hawaiianairlines.com/static/images/hawaiistories/hawaii-is-our-home/reservations/thumbnail/sharingaloha_titlestill.jpg?version=64de&amp;sc_lang=en&amp;w=680&amp;hash=0DDF3ADD251D3103F838FEEB1A776956D0CE453D,//img.s-hawaiianairlines.com/static/images/hawaiistories/hawaii-is-our-home/reservations/thumbnail/sharingaloha_titlestill.jpg?version=64de&amp;sc_lang=en&amp;w=340&amp;hash=92BE4A5556BB95B27D97EE3A8C341067AC723707,//img.s-hawaiianairlines.com/static/images/hawaiistories/hawaii-is-our-home/reservations/thumbnail/sharingaloha_titlestill.jpg?version=64de&amp;sc_lang=en&amp;w=680&amp;hash=0DDF3ADD251D3103F838FEEB1A776956D0CE453D" alt="">
+                  <h5>Sharing aloha series</h5>
+                <p>We’re sharing a little bit of aloha by bringing you videos featuring life and culture here in the Islands. See some of our favorite recipes prepared by local chefs, cultural activities and classes led by our employees and local music and entertainment from the comfort of your home.</p>
+                <button data-toggle="modal" data-target="#staticBackdrop">Learn more</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+  <div class="keepsafePopupVideo">
+    <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content" style="width: 650px;">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <iframe width="600" height="345" src="https://youtu.be/X3SQsAl-Ehk">
+            </iframe>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <div class="row">
+          <div class="col-lg-2">
+            <div class="footer-box">
+              <h6>Support</h6>
+              <a href="">Contact Us</a>
+              <a href="">Help Center</a>
+              <a href="">Sitemap</a>
+              <a href="">Guests with Disabilities</a>
+            </div>
+          </div>
+          <div class="col-lg-2">
+            <div class="footer-box">
+              <a href="">Legal</a>
+              <a href="">Terms of Use</a>
+              <a href="">All Fees</a>
+              <a href="">Team Kokua</a>
+            </div>
+          </div>
+          <div class="col-lg-2">
+            <div class="footer-box">
+              <h6>About Us</h6>
+              <a href="">Contract of Carriage</a>
+              <a href="">Careers</a>
+              <a href="">Investor Relations</a>
+              <a href="">Cargo</a>
+              <a href="">Fare Deals</a>
+            </div>
+          </div>
+          <div class="col-lg-2">
+            <div class="footer-box">
+              <a href="">Customer Service Plan</a>
+              <a href="">Tarmac Delay Plan</a>
+              <a href="">Privacy</a>
+              <a href="">Shop Our Store</a>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="footer-box">
+              <h6>Sign Up for Deals</h6>
+              <h5>Get notifications for low fares & special deals.</h5>
+              <form action="">
+                <input type="text" placeholder="Email Address">
+                <button>Subscribe</button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="footer-contact">
+          <div class="footer-logo">
+            <img src="https://www.hawaiianairlines.com/Content/assets/images/logos/ha-logo-stacked.png" alt="">
+          </div>
+          <div class="footer-sm">
+            <li><i class='fab fa-facebook'></i></li>
+            <li><i class='fab fa-twitter'></i></li>
+            <li><i class='fab fa-instagram'></i></li>
+          </div>
+        </div>
+        <div class="copyright">
+          <h6>© 2020 Hawaiian Airlines. All Rights Reserved [SC8.2.7]</h6>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="./js/main.js"></script>
+  <script src="./js/tabs.js"></script>
+  <script src="./js/select.js"></script>
+</body>
+</html>

@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hawaiian Airlines - Flights to Hawaii, Plane Tickets &amp; Airfare</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" >
+  <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <div class="header-left">
+        <div class="header-left-logo">
+          <img src="https://www.hawaiianairlines.com/Content/assets/images/logos/ha-logo-horizontal.png" alt="">
+        </div>
+      </div>
+      <div class="header-right">
+        <div class="header-right-topnav">
+          <nav class="topnav-inner">
+            <ul>
+              <li><a href="#">Help Center</a></li>
+              <li><a href="#">Optional Fees</a></li>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">Contact Us</a></li>
+              <li class="topNav-search" onclick="openSearch()">
+                <i class='fas fa-search'></i>
+                <span>Search</span>
+              </li>
+              <div class="btn-group">
+                <button onclick="toggleRotate()" class="languageSelect-default" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <img src="./icons/flags/united-states.png" alt="">
+                  <span >USD</span>
+                  <i style="transition: .3s;" id="toggleIcon" class='fas fa-caret-down'></i>
+                </button>
+                <div class="dropdown-menu dropdown-menu-right">
+                  <div class="moreLanguages">
+                    <li>
+                      <span>United States(USD)</span>
+                      <img src="./icons/flags/united-states.png" alt="">
+                    </li>
+                    <li>
+                      <span>日本 (JPY)</span>
+                      <img src="./icons/flags/japan.png" alt="">
+                    </li>
+                    <li>
+                      <span>한국어 (KRW)</span>
+                      <img src="./icons/flags/south-korea.png" alt="">
+                    </li>
+                    <li>
+                      <span>Australia (AUD)</span>
+                      <img src="./icons/flags/austria.png" alt="">
+                    </li>
+                    <li>
+                      <span>New Zealand (NZD)</span>
+                      <img src="./icons/flags/new-zealand.png" alt="">
+                    </li>
+                    <li>
+                      <span>中国 (CNY)</span>
+                      <img src="./icons/flags/china.png" alt="">
+                    </li>
+                  </div>
+                </div>
+              </div>
+            </ul>
+          </nav>
+        </div>
+        <div class="header-right-mainNav">
+          <div class="mainNav-inner">
+            <ul>
+              <li><a href="#">Book</a><div class="list-bottomLine-hidden"></div></li>
+              <li><a href="#">Manage Flights</a><div class="list-bottomLine-hidden"></div></li>
+              <li><a href="#">Our Airline</a><div class="list-bottomLine-hidden"></div></li>
+              <li><a href="#">Island Guide</a><div class="list-bottomLine-hidden"></div></li>
+            </ul>
+            <div class="mainNav-dropLine"></div>
+            <div class="mainNav-activity">
+              <img src="https://www.hawaiianairlines.com/Content/assets/images/logos/hm-logo-hawaiianmiles.png" alt="">
+              <div class="mainNav-authItems">
+                <a href="">Sign In</a>
+                <a href="">Join Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div id="searchDiv" class="header-searchboxHidden">
+    <div class="serchBox-inner">
+      <div class="searchBox-left">
+        <div class="searchbox-localHide">
+          <i onclick="closeSearch()" class="fa fa-close"></i>
+        </div>
+        <div class="searchbox-input">
+          <i class='fas fa-search'></i>
+          <input type="text" placeholder="Type Your Question Here">
+        </div>
+        <button>Search</button>
+      </div>
+      <div class="searchbox-right">
+        <div class="question-box">
+          <h6>Frequently Asked Questions</h6>
+          <div class="questions">
+            <a href="">What do I need to do to change or cancel my reservation?</a>
+            <a href="">How much are baggage fees on my flight?</a>
+            <a href="">How do I check in online?</a>
+          </div>
+          <button>Read more FAQs</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <section>
+    <div class="bookSection-inner">
+      <div class="container">
+        <div class="bookBox">
+          <div class="tab">
+            <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">
+              <i class='fas fa-plane-departure'></i>
+              <span>
+                Flights
+              </span>
+            </button>
+            <button style="width: 200px;" class="tablinks" onclick="openCity(event, 'Paris')">
+              <i class='fas fa-plane'></i>
+              <span>Vacation Deals</span>
+            </button>
+            <button class="tablinks" onclick="openCity(event, 'Tokyo')">
+              <i class='fas fa-hotel'></i>
+              <span>Hotels</span>
+            </button>
+            <button class="tablinks" onclick="openCity(event, 'Transportation')">
+              <i class='fas fa-car'></i>
+              <span>Transportation</span>
+            </button>
+            <button class="tabSideLink">
+              <i class='far fa-check-circle'></i>
+              <h5>Check-in</h5>
+            </button>
+            <button class="tabSideLink">
+              <i class='fas fa-suitcase'></i>
+              <h5>My Trips</h5>
+            </button>
+            <button class="tabSideLink">
+              <i class='far fa-clock'></i>
+              <h5>Flight Status</h5>
+            </button>
+          </div>
+          <div id="London" class="tabcontent">
+            <div class="tabcontent-flight-content">
+              <li>
+                <button>
+                  From*
+                </button>
+                <input type="text" placeholder="City, Airport os Island">
+                <i class='fas fa-map-marker-alt'></i>
+              </li>
+              <li>
+                <button>
+                  To*
+                </button>
+                <input type="text" placeholder="City, Airport os Island">
+                <i class='fas fa-map-marker-alt'></i>
+              </li>
+              <div class="flight-goBtn">
+                <i class='fas fa-angle-right'></i>
+              </div>
+            </div>
+          </div>
+          <div id="Paris" class="tabcontent">
+            <div class="tabContent-vacationContent">
+              <div class="vacationContent-sixFromTo">
+                <div class="row">
+                  <div class="col-lg-6">
+                    <li>
+                      <button>
+                        From*
+                      </button>
+                      <input type="text" placeholder="City, Airport os Island">
+                      <i class='fas fa-map-marker-alt'></i>
+                    </li>
+                  </div>
+                  <div class="col-lg-6">
+                    <li>
+                      <button>
+                        To*
+                      </button>
+                      <input type="text" placeholder="City, Airport os Island">
+                      <i class='fas fa-map-marker-alt'></i>
+                    </li>
+                  </div>
+                  <div class="col-lg-6">
+                    <li>
+                      <button>
+                        Depart*
+                      </button>
+                      <input type="date" placeholder="City, Airport os Island">
+                    </li>
+                  </div>
+                  <div class="col-lg-6">
+                    <li>
+                      <button>
+                        Return*
+                      </button>
+                      <input type="date" placeholder="City, Airport os Island">
+                    </li>
+                  </div>
+                  <div class="col-lg-6">
+                    <li>
+                      <button>
+                        Depart Time*
+                      </button>
+                      <input type="text" placeholder="City, Airport os Island">
+                      <i class='fas fa-angle-down'></i>
+                    </li>
+                  </div>
+                  <div class="col-lg-6">
+                    <li>
+                      <button>
+                        Return Time*
+                      </button>
+                      <input type="text" placeholder="City, Airport os Island">
+                      <i class='fas fa-angle-down'></i>
+                    </li>
+                  </div>
+                </div>
+                <div class="row" style="display: flex; flex-direction: column;">
+                    <label class="flightPackageLabel" for="">Seating</label>
+                    <div class="col-lg-6">
+                      <div class="flingpackageItem">
+                        <div class="coach">
+                          <input type="radio">
+                          <h5>Coach</h5>
+                        </div>
+                        <div class="firstClass">
+                          <input type="radio">
+                          <h5>First Class</h5>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                <div class="hotelItems">
+                  <div class="row">
+                    <div class="col-lg-4">
+                      <div class="hotel-customSelect">
+                        <label for="">Rooms</label>
+                        <select name="" id="1">
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-lg-4">
+                      <div class="hotel-customSelect">
+                        <label for="">Adults (+18)</label>
+                        <select name="" id="1">
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                          <option value="6">6</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-lg-4">
+                      <div class="hotel-customSelect">
+                        <label for="">Children (0-17 Years of age at time of travel)</label>
+                        <select name="" id="1">
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                          <option value="6">6</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="vacation-footer">
+              <hr color="white">
+              <button>Continue</button>
+              <a class="moreOption" href="#">More Vacation Package Options</a>
+              <div class="vacation-help">
+                <i class='far fa-question-circle'></i>
+                <a href="">Help</a>
+              </div>
+            </div>
+          </div>
+          
+          <div id="Tokyo" class="tabcontent">
+            <div class="HotelsTabcontent">
+              <div class="row">
+                <div class="col-lg-8">
+                  <div class="hotelsDestination">
+                    <button>Destination*</button>
+                    <input type="text" placeholder="City, Airport or Icland">
+                    <i class='fas fa-map-marker-alt'></i>
+                  </div>
+                </div>
+              </div>
+              <div class="row" style="margin-top: 30px;">
+                <div class="col-lg-6">
+                  <div class="checkIn">
+                    <button>Check In*</button>
+                    <input type="date">
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="checkOut">
+                    <button>Check Out*</button>
+                    <input type="date">
+                  </div>
+                </div>
+              </div>
+              <div class="hotelItems">
+                <div class="row">
+                  <div class="col-lg-4">
+                    <div class="hotel-customSelect">
+                      <label for="">Rooms</label>
+                      <select name="" id="1">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-lg-4">
+                    <div class="hotel-customSelect">
+                      <label for="">Adults (+18)</label>
+                      <select name="" id="1">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-lg-4">
+                    <div class="hotel-customSelect">
+                      <label for="">Children (0-17 Years of age at time of travel)</label>
+                      <select name="" id="1">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="vacation-footer">
+                <hr color="white">
+                <button>View Details</button>
+                <a class="moreOption" href="#" style="margin: 20px 0; margin-top: 40px;">More Hotel Search Options</a>
+                <a class="moreOption" href="#" style="margin: 0;">View HawaiianMiles Hotel Specials</a>
+                <div class="vacation-help" style="margin-top: 40px;">
+                  <i class='far fa-question-circle'></i>
+                  <a href="">Help</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="Transportation" class="tabcontent">
+            <div class="transportation-inner">
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="transportationBoxes">
+                    <button style="width: 150px;">Pick-Up-Location</button>
+                    <input type="text" placeholder="City, Airport or Island">
+                    <i class='fas fa-map-marker-alt'></i>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="transportationBoxes">
+                    <button style="width: 150px;">Drop-Off Location</button>
+                    <input type="text" placeholder="Same As Pick-Up">
+                    <i class='fas fa-map-marker-alt'></i>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="transportationBoxes">
+                    <button style="width: 150px;">Pick-Up-Date</button>
+                    <input type="date" placeholder="Pick-Aup-Date">
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="transportationBoxes">
+                    <button style="width: 150px;">Return Date</button>
+                    <input type="date" placeholder="Return Date">
+                  </div>
+                </div>
+                <div class="col-lg-6" style="margin-top: 30px;">
+                  <div class="hotel-customSelect" style="display: flex;">
+                    <button>Pick-Up-Time</button>
+                    <select name="" id="1">
+                      <option value="1">Any Time</option>
+                      <option value="2">12:30am</option>
+                      <option value="3">1:00am</option>
+                      <option value="4">1:30am</option>
+                      <option value="5">2:00am</option>
+                      <option value="6">2:30am</option>
+                      <option value="6">3:00am</option>
+                      <option value="6">3:30am</option>
+                      <option value="6">4:00am</option>
+                      <option value="6">4:30am</option>
+                      <option value="6">5:00am</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-lg-6" style="margin-top: 30px;">
+                  <div class="hotel-customSelect" style="display: flex;">
+                    <button>Drop-Off-Time</button>
+                    <select name="" id="1">
+                      <option value="1">Any Time</option>
+                      <option value="2">12:30am</option>
+                      <option value="3">1:00am</option>
+                      <option value="4">1:30am</option>
+                      <option value="5">2:00am</option>
+                      <option value="6">2:30am</option>
+                      <option value="6">3:00am</option>
+                      <option value="6">3:30am</option>
+                      <option value="6">4:00am</option>
+                      <option value="6">4:30am</option>
+                      <option value="6">5:00am</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="partnerFeatures-boxes">
+    <div class="box">
+      <img src="./icons/features/help.png" alt="">
+      <a href="">Overview</a>
+    </div>
+    <div class="box">
+      <img src="./icons/features/puzzle.png" alt="">
+      <a href="">HawaiianMiles Partner Features</a>
+    </div>
+    <div class="box">
+      <img src="./icons/features/online-shopping.png" alt="">
+      <a href="">HawaiianMiles Marketplace</a>
+    </div>
+    <div class="box">
+      <img src="./icons/features/fast-food.png" alt="">
+      <a href="">Foodland</a>
+    </div>
+    <div class="box">
+      <img src="./icons/features/shopping-bags.png" alt="">
+      <a href="">Shopping Mall Events</a>
+    </div>
+    <div class="box" style="border-right:1px solid  rgba(109, 108, 108, 0.418);">
+      <img src="./icons/features/people.png" alt="">
+      <a href="">Specialty Partners</a>
+    </div>
+  </div>
+  <div class="companySwards">
+  <div class="container">
+    <div class="companyAwards-inner">
+      <div class="awards-headline">
+        <h1>Awards & Recognition</h1>
+      </div>
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="awardBox">
+            <img src="./icons/sale.png" alt="">
+            <h2>HAWAII'S AIRLINE</h2>
+            <p>
+              Now in 90th year of continuous service, Hawaiian
+              Airlines in Hawaii's biggest longest-serving
+              airline
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="awardBox">
+            <img src="./icons/sale.png" alt="">
+            <h2>LEARED ON-TIME PERFORMANCE</h2>
+            <p>
+              Hawaiian Airlines has led all U.S. carriers in on-time 
+              performance for each of past 14 years as 
+              reported by the U.S. DOT.
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="awardBox">
+            <img src="./icons/sale.png" alt="">
+            <h2>TOP DOMESTIC CARRIES</h2>
+            <p>
+              Consumer surveys by Conde Nast Traveler, + 
+              Leisure and TripAdvisor have placed Hawaiian
+              Airlines among the of all demostic Airlines
+              serving Hawaii
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <div class="company-carreers">
+    <div class="container-fluid">
+          <div class="container">
+      <div class="carreers-inner">
+        <h2>Careers</h2>
+        <p>
+          As Hawai'i's airline for more than 90 years, we have overcome difficult periods in our past, 
+          and the COVID-19 pandemic has only strengthened our belief that our people are our greatest asset. 
+          We remain committed to serving the travel needs of our guests and communities – and know that together 
+          we will successfully navigate through this new challenge. As we look to the future, we are recruiting 
+          passionate candidates to join our 'ohana in select roles as we adjust our business to be ready to Connect 
+          People with Aloha and once again share our islands with the world.
+        </p>
+      </div>
+    </div>
+    </div>
+  </div>
+  <div class="safetesting">
+    <div class="safetest">
+      <div class="container">
+        <div class="safetesting-inner">
+          <h1>Safe and reliable testing options from Hawaiian Airlines</h1>
+          <div class="safetesting-banner">
+           <div class="row">
+             <div class="col-lg-6">
+              <div class="banner-image">
+                <img src="https://img.s-hawaiianairlines.com/static/images/coronavirus/covid-testing-images/image---covid-testing.png?version=ee59&sc_lang=en" alt="">
+              </div>
+             </div>
+             <div class="col-lg-6">
+               <div class="banner-text">
+                 <h5>Tests that meet Hawaii’s pre-travel testing requirements</h5>
+                 <p>
+                  We’re making it simple and easy for you by providing testing options that 
+                  guarantee turnaround times for results within the state’s required 72-hour 
+                  timeframe. All tests are PCR tests – the gold standard for COVID-19 testing.
+                 </p>
+                 <a href="./keepSafe.html">LEARN MORE</a>
+               </div>
+             </div>
+           </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="tripPlain-area">
+    <div class="container">
+      <div class="palinTrip-inner">
+        <div class="plaintrip-headline">
+          <h3>Plain you perfect trip</h3>
+          <h6>Search Flights. Hotels & Car Hire to our most popular destination</h6>
+        </div>
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="plaintrip-box">
+              <img src="./image/amsterdam.jpg" alt="">
+              <div class="painftrip-box-description">
+                <h2>Amsterdam</h2>
+                <h5>Flight - Hotels - Car Hire</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="plaintrip-box">
+              <img src="./image/london.jpg" alt="">
+              <div class="painftrip-box-description">
+                <h2>London</h2>
+                <h5>Flight - Hotels - Car Hire</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="plaintrip-box">
+              <img src="./image/dublin.jpg" alt="">
+              <div class="painftrip-box-description">
+                <h2>Dublin</h2>
+                <h5>Flight - Hotels - Car Hire</h5>
+              </div>
+            </div>
+          </div>
+          <div class="w-100"></div>
+          <div class="col-lg-4">
+            <div class="plaintrip-box">
+              <img src="./image/paris.jpg" alt="">
+              <div class="painftrip-box-description">
+                <h2>Paris</h2>
+                <h5>Flight - Hotels - Car Hire</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="plaintrip-box">
+              <img src="./image/barcelona.jpg" alt="">
+              <div class="painftrip-box-description">
+                <h2>Barcelona</h2>
+                <h5>Flight - Hotels - Car Hire</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="plaintrip-box">
+              <img src="./image/belfast.jpg" alt="">
+              <div class="painftrip-box-description">
+                <h2>Belfast</h2>
+                <h5>Flight - Hotels - Car Hire</h5>
+              </div>
+            </div>
+          </div>
+          <div class="w-100"></div>
+          <div class="col-lg-4">
+            <div class="plaintrip-box">
+              <img src="./image/berlin.jpg" alt="">
+              <div class="painftrip-box-description">
+                <h2>Berlin</h2>
+                <h5>Flight - Hotels - Car Hire</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="plaintrip-box">
+              <img src="./image/milan.jpg" alt="">
+              <div class="painftrip-box-description">
+                <h2>Milan</h2>
+                <h5>Flight - Hotels - Car Hire</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="plaintrip-box">
+              <img src="./image/edinburgh.jpg" alt="">
+              <div class="painftrip-box-description">
+                <h2>Edinbourgh</h2>
+                <h5>Flight - Hotels - Car Hire</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <div class="row">
+          <div class="col-lg-2">
+            <div class="footer-box">
+              <h6>Support</h6>
+              <a href="">Contact Us</a>
+              <a href="">Help Center</a>
+              <a href="">Sitemap</a>
+              <a href="">Guests with Disabilities</a>
+            </div>
+          </div>
+          <div class="col-lg-2">
+            <div class="footer-box">
+              <a href="">Legal</a>
+              <a href="">Terms of Use</a>
+              <a href="">All Fees</a>
+              <a href="">Team Kokua</a>
+            </div>
+          </div>
+          <div class="col-lg-2">
+            <div class="footer-box">
+              <h6>About Us</h6>
+              <a href="">Contract of Carriage</a>
+              <a href="">Careers</a>
+              <a href="">Investor Relations</a>
+              <a href="">Cargo</a>
+              <a href="">Fare Deals</a>
+            </div>
+          </div>
+          <div class="col-lg-2">
+            <div class="footer-box">
+              <a href="">Customer Service Plan</a>
+              <a href="">Tarmac Delay Plan</a>
+              <a href="">Privacy</a>
+              <a href="">Shop Our Store</a>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="footer-box">
+              <h6>Sign Up for Deals</h6>
+              <h5>Get notifications for low fares & special deals.</h5>
+              <form action="">
+                <input type="text" placeholder="Email Address">
+                <button>Subscribe</button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="footer-contact">
+          <div class="footer-logo">
+            <img src="https://www.hawaiianairlines.com/Content/assets/images/logos/ha-logo-stacked.png" alt="">
+          </div>
+          <div class="footer-sm">
+            <li><i class='fab fa-facebook'></i></li>
+            <li><i class='fab fa-twitter'></i></li>
+            <li><i class='fab fa-instagram'></i></li>
+          </div>
+        </div>
+        <div class="copyright">
+          <h6>© 2020 Hawaiian Airlines. All Rights Reserved [SC8.2.7]</h6>
+        </div>
+      </div>
+    </div>
+
+  </footer>
+  <script src="./js/main.js"></script>
+  <script src="./js/tabs.js"></script>
+  <script src="./js/select.js"></script>
+</body>
+</html>
