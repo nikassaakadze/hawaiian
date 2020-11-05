@@ -1,0 +1,21 @@
+@import 'config';
+
+*{
+    font-family: $default-font;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li{
+    display: inline-block;
+    list-style: none;
+}
+
+a{
+    text-decoration: none !important;
+}
+
+body{
+    background-color: #ebebeb;
+}

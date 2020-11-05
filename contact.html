@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hawaii</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/responsive.css">
+  <link rel="stylesheet" href="./css/searchbox.css">
+  <link rel="stylesheet" href="./css/headerDropdown.css">
+  <link rel="stylesheet" href="./css/bookTabs.css">
+  <link rel="stylesheet" href="./css/responsiveNav.css">
+  <link rel="stylesheet" href="./css/contact.css">
+</head>
+<body>
+  <div class="responsive-nav-fullwidth">
+    <div class="responsive-nav-inner">
+      <div class="closeNav">
+        <img onclick="closeNav()" src="./icons/close.png" alt="">
+      </div>
+      <div class="responsive-navc-content">
+        <div class="logo">
+          <a href="./index.html">
+            <img src="./ui/img/nav-logo.png" alt="">
+          </a>
+        </div>
+        <nav class="responsive-navlist">
+          <ul>
+            <li><a href="">Book</a></li>
+            <li><a href="">Manage Flights</a></li>
+            <li><a href="">Our Airline</a></li>
+            <li><a href="">Island Guide</a></li>
+          </ul>
+        </nav>
+        <div class="responsive-nav-userAuth">
+          <a href="">Sign In</a>
+          <span>or</span>
+          <a href="">Join Now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="popup-search">
+    <div class="header-topnav-searchbox">
+      <div class="search-right">
+        <div class="search-localhide">
+          <img onclick="hideSearch()" src="./icons/close.png" alt="">
+        </div>
+        <div class="search-header">
+          <img src="./icons/loupe.png" alt="">
+          <input type="text" placeholder="Type your question here">
+        </div>
+        <div class="search-footer">
+          <button type="submit">Search</button>
+        </div>
+      </div>
+      <div class="search-left">
+        <div class="header-left-inner">
+          <h6>Frequnetly asket questions</h6>
+          <ul>
+            <li>
+              <a href="">What do I need to do to change or cancel my reservation?</a>
+            </li>
+            <li>
+              <a href="">How much are baggage fees on my flight?</a>
+            </li>
+            <li>
+              <a href="">How do I check in online?</a>
+            </li>
+          </ul>
+          <a class="more-question" href="">Read more FAQs</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <header>
+    <div class="header-inner">
+      <div class="header-left">
+        <div class="header-logo">
+          <a href="./index.html">
+            <img src="./ui/img/header-logo.png" alt="">
+        </a>
+        </div>
+      </div>
+      <div class="header-right">
+        <div class="header-right-topnav">
+          <nav>
+            <ul>
+              <li><a href="">Help Center</a></li>
+              <li><a href="">Optional Fees</a></li>
+              <li><a href="./contact.html">Contact Us</a></li>
+            </ul>
+            <div onclick="openSearch()" class="header-topnav-search">
+              <img src="./icons/loupe.png" alt="">
+              <span>Search</span>
+            </div>
+            <div class="header-topnav-languages">
+              <div onclick="showLanguages()" class="default-language">
+                <img src="./icons/flags/united-states.png" alt="">
+                <span>USD</span>
+                <i id="toggle" class='fas fa-caret-down'></i>
+              </div>
+              <div class="header-language-box">
+                <div class="header-language-select">
+                  <ul>
+                    <li>
+                      <h5>United States (USD)</h5>
+                      <img src="./icons/flags/united-states.png" alt="">
+                    </li>
+                    <li>
+                      <h5>Australia (AUD)</h5>
+                      <img src="./icons/flags/australia.png" alt="">
+                  </li>
+                    <li>
+                      <h5>中国 (CNY)</h5>
+                      <img src="./icons/flags/china.png" alt="">
+                    </li>
+                    <li>
+                      <h5>日本 (JPY)</h5>
+                      <img src="./icons/flags/japan.png" alt="">
+                    </li>
+                    <li>
+                      <h5>New Zealand (NZD)</h5>
+                      <img src="./icons/flags/new-zealand.png" alt="">
+                    </li>
+                    <li>
+                      <h5>한국어 (KRW)</h5>
+                      <img src="./icons/flags/south-korea.png" alt="">
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+        <div class="header-right-bottomnav">
+          <nav>
+            <ul>
+              <li class="navlist" onclick="downBook()"><a href="#">Book</a><div class="navlist-bottomline"></div></li>
+              <li class="navlist" onclick="downManage()"><a href="#">Manage Flight</a><div class="navlist-bottomline"></div></li>
+              <li class="navlist" onclick="downAirline()"><a href="#">Our Airline</a><div class="navlist-bottomline"></div></li>
+              <li><a href="#">Island Guide</a><div class="navlist-bottomline"></div></li>
+            </ul>
+            <div class="dropLine"></div>
+            <div class="header-bottomnav-logo">
+              <img src="./ui/img/nav-logo.png" alt="">
+            </div>
+            <div class="bottomnav-authorize">
+              <a href="">Sign In</a>
+              <a href="">Join Now</a>
+            </div>
+          </nav>
+          <div class="responsive-navburger">
+            <img onclick="openNav()" src="./icons/burger.png" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div id="Book" class="header-navigation-dropdown">
+    <div class="dropdown-inner">
+      <div class="inner-boxes">
+        <li>
+          <img src="./icons/nav/airplane.png" alt="">
+          <span>Flights</span>
+        </li>
+        <li>
+          <img src="./icons/nav/earth-globe-with-continents-maps.png" alt="">
+          <span>Routes</span>
+        </li>
+        <li>
+          <img src="./icons/nav/hotel.png" alt="">
+          <span>Hotels</span>
+        </li>
+        <li>
+          <img src="./icons/nav/sedan-car-front.png" alt="">
+          <span>Transportation</span>
+        </li>
+        <li>
+          <img src="./icons/nav/vacation.png" alt="">
+          <span>Vacation Deals</span>
+        </li>
+        <li>
+          <img src="./icons/nav/boat.png" alt="">
+          <span>Activies & Cruises</span>
+        </li>
+      </div>
+    </div>
+  </div>
+  <div id="Manage" class="header-navigation-dropdown">
+    <div class="dropdown-inner">
+      <div class="inner-boxes">
+        <li>
+          <img src="./icons/nav-1/accept.png" alt="">
+          <span>Check-In/span>
+        </li>
+        <li>
+          <img src="./icons/nav-1/flight.png" alt="">
+          <span>Flight Status</span>
+        </li>
+        <li>
+          <img src="./icons/nav-1/suitcase-with-white-details.png" alt="">
+          <span>My Trip</span>
+        </li>
+        <li>
+          <img src="./icons/nav-1/invoice.png" alt="">
+          <span>My Receipts</span>
+        </li>
+      </div>
+    </div>
+  </div>
+  <div id="Airline" class="header-navigation-dropdown">
+    <div class="dropdown-inner">
+      <div class="inner-boxes">
+        <li>
+          <img src="./icons/nav-1/accept.png" alt="">
+          <span>Check-In</span>
+        </li>
+        <li>
+          <img src="./icons/nav-1/flight.png" alt="">
+          <span>Flight Status</span>
+        </li>
+        <li>
+          <img src="./icons/nav-1/suitcase-with-white-details.png" alt="">
+          <span>My Trip</span>
+        </li>
+        <li>
+          <img src="./icons/nav/airplane.png" alt="">
+          <span>Flights</span>
+        </li>
+        <li>
+          <img src="./icons/nav/earth-globe-with-continents-maps.png" alt="">
+          <span>Routes</span>
+        </li>
+        <li>
+          <img src="./icons/nav-1/invoice.png" alt="">
+          <span>My Receipts</span>
+        </li>
+      </div>
+    </div>
+  </div>
+  <section class="contact">
+    <div class="contact-section-inner">
+      <div class="contact-image">
+        <img src="./ui/img/contact.png" alt="">
+      </div>
+      <div class="contact-form">
+        <h4>Contact Us</h4>
+        <form action="">
+          <input type="text" placeholder="name">
+          <input type="text" placeholder="email">
+          <textarea name="" id="" cols="30" rows="10" placeholder="Write a message"></textarea>
+        </form>
+        <button>Send message</button>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-boxes">
+        <div class="footer-box">
+          <h6>Support</h6>
+          <a href="">Contact Us</a>
+          <a href="">Help Center</a>
+          <a href="">Sitemap</a>
+          <a href="">Guests with Disabilities</a>
+        </div>
+        <div class="footer-box">
+          <a href="">Legal</a>
+          <a href="">Terms of Use</a>
+          <a href="">All Fees</a>
+          <a href="">Team Kokua</a>
+        </div>
+        <div class="footer-box">
+          <h6>About Us</h6>
+          <a href="">Contract of Carriage</a>
+          <a href="">Careers</a>
+          <a href="">Investor Relations</a>
+          <a href="">Cargo</a>
+          <a href="">Fare Deals</a>
+        </div>
+        <div class="footer-box">
+          <a href="">Customer Service Plan</a>
+          <a href="">Tarmac Delay Plan</a>
+          <a href="">Privacy</a>
+          <a href="">Shop Our Store</a>
+        </div>
+        <div class="footer-box">
+          <h6>Sign Up for Deals</h6>
+          <h5>Get notifications for low fares &amp; special deals.</h5>
+          <form action="">
+            <input type="text" placeholder="Email Address">
+            <button>Subscribe</button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-contact">
+        <div class="footer-logo">
+          <img src="./ui/img/footer-logo.png" alt="">
+        </div>
+        <div class="footer-sm">
+          <ul>
+            <li><i class='fab fa-instagram'></i></li>
+            <li><i class='fab fa-twitter'></i></li>
+            <li><i class='fab fa-facebook'></i></li>
+          </ul>
+        </div>
+        <div class="footer-copyright">
+          <h6>© 2020 Hawaiian Airlines. All Rights Reserved [SC8.2.7]</h6>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="./js/dropDowns.js"></script>
+  <script src="./js/main.js"></script>
+  <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+  <script src="./js/tabs.js"></script>
+</body>
+</html>

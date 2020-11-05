@@ -1,0 +1,182 @@
+@import 'config';
+
+.book-section{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("../ui/banner.jpg");
+  min-height: 500px;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 50px 0;
+}
+
+.book-section-inner{
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 10px;
+}
+
+.tab {
+  overflow: hidden;
+  background-color: $secondary-color
+}
+.tablinkSide{
+  i{
+    color: #ee453d;
+  }
+}
+
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 15px 25px;
+  transition: 0.3s;
+  font-size: 17px;
+  color: whitesmoke;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  h5{
+    margin-left: 5px;
+  }
+}
+
+.tab button:hover {
+  background-color: #370a38;
+}
+
+.tab button.active {
+  background-color: $primary-color;
+}
+
+.tabcontent {
+  display: none;
+  padding: 30px 30px;
+  border-top: none;
+}
+
+.book-tabs{
+  background: rgb(206,12,136);
+background: linear-gradient(90deg, rgba(206,12,136,1) 0%, rgba(92,16,64,1) 100%);
+  button{
+    height: 58px;
+    min-width: 100px;
+    border: 1px solid #999;
+    border-right: 0;
+    outline: 0;
+  }
+  input, select{
+    height: 58px;
+    border: 1px solid #999;
+    border-right: 0;
+    outline:0;
+    padding: 0 15px;
+    background-image: url('../icons/location.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-size: 27px;
+    background-position-y: center;
+    background-position-x: 97%;
+  }
+}
+
+.flight-tab-content, .vacationTab-line{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  li{
+    display: flex;
+    width: 100%;
+    margin: 10px;
+    input, select{
+      flex: 1;
+    }
+  }
+  select{
+    appearance: none;
+    background-image: url('../icons/down-arrow.png');
+    background-size: 13px;
+    option{
+      padding: 10px;
+      font-size: 18px;
+    }
+  }
+}
+
+.selects{
+  margin-top: 18px;
+  li{
+    display: flex;
+    flex-direction: column;
+  }
+  label{
+    font-size: 13px;
+    color: white;
+  }
+  select{
+    padding: 20px;
+  }
+}
+
+.flight-go-btn{
+  background-color: #ee453d;
+  border: none !important;
+  img{
+    height: 20px;
+  }
+}
+
+.vacation-tab-checkboxes{
+  margin-top: 20px;
+  label{
+    color: white;
+    margin-left: 10px;
+    font-size: 13px;
+    padding-bottom: 3px;
+  }
+  ul{
+    display: flex;
+    margin-left: 10px;
+  }
+  li{
+    display: flex;
+    align-items: center;
+    background-color: whitesmoke;
+    width: 208px;
+    padding-left: 10px;
+    h5{
+      margin-left: 10px;
+    }
+    input{
+      width: 20px;
+    }
+  }
+}
+
+.vacation-tab-footer{
+  display: flex;
+  flex-direction: column;
+  margin-top: 70px;
+  a, i{
+    color: white;
+    font-size: 14px;
+  }
+  button{
+    width: 200px;
+    background: #e1e3e4;
+    color: black;
+    font-weight: bold;
+    font-size: 17px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+  }
+  padding: 0 9px;
+  li{
+    margin: 50px 0;
+  }
+}

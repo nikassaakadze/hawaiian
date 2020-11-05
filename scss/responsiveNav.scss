@@ -1,0 +1,76 @@
+@import 'config';
+
+.responsive-nav-fullwidth{
+    z-index: 300;
+    width: 0%;
+    visibility: hidden;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color:$secondary-color ;
+    transition: .2s;
+}
+
+.responsive-nav-inner{
+    padding: 30px;
+}
+
+.closeNav{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    border-bottom: 1px solid rgba(153, 153, 153, 0.308);
+    padding-bottom: 30px;
+    img{
+        height: 30px;
+        cursor: pointer;
+    }
+}
+
+.logo{
+    width: 100%;
+    text-align: center;
+    padding-top: 25px;
+}
+
+.responsive-navlist{
+    margin-top: 25px;
+    ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        width: 100%;
+        li{
+            margin: 5px 0;
+            background-color: rgb(41, 19, 61);
+            padding: 10px 0;
+            width: 100%;
+           a{
+            color: white;
+            padding:10px;
+            width: 100%;
+           }
+        }
+    }
+}
+
+.responsive-nav-userAuth{
+    width: 100%;
+    text-align: center;
+    padding-top: 30px;
+    a{
+        background-color: $primary-color;
+        color: white;
+        padding: 10px 20px;
+        margin: 0 10px;
+    }
+}
+
+.responsiveNav-visible{
+    width: 100%;
+    visibility: visible;
+    transition: .2s;
+}
